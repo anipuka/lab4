@@ -18,8 +18,10 @@ jobs:
         sudo apt-get update
         sudo apt-get install -y build-essential cmake
 
-    - name: Create build directory
-      run: mkdir -p build
+    - name: Clean and prepare build directory
+      run: |
+        rm -rf build || true
+        mkdir -p build
 
     - name: Configure CMake
       working-directory: ./build

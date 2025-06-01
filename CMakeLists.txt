@@ -26,7 +26,7 @@ target_include_directories(solver PUBLIC
     $<BUILD_INTERFACE:${CMAKE_CURRENT_SOURCE_DIR}/solver_lib>
     $<INSTALL_INTERFACE:include>
 )
-target_link_libraries(solver PUBLIC formatter_ex)
+target_link_libraries(solver PUBLIC formatter_ex m)
 
 # Add hello_world application
 add_executable(hello_world hello_world_application/hello_world.cpp)
